@@ -1,0 +1,17 @@
+{
+	"name": "book-me",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"jquery": "2.2.0",
+		"angular": "1.5.0",
+		"angular-ui-router": "0.2.18",
+		"bootstrap": "3.3.6"
+	}
+}
