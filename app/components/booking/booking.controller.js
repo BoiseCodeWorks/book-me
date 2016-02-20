@@ -6,6 +6,7 @@
 		.controller('BookingController', BookingController);
 
 	function BookingController($scope, DataService) {
-		$scope.name = "Booking Controller..."
+		console.log(DataService);
+		$scope.bookings = DataService.bookings;
 	}
 })();
