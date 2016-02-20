@@ -5,16 +5,12 @@
 		.module('app')
 		.controller('BookingController', BookingController);
 
-	function BookingController($scope, DataService) {
-		$scope.bookings = [];
-		
-		console.log("First")
-
-		DataService.getBookings().success(function (data) {
-			console.log("Third")
-			$scope.bookings = data;
-		})
-
-		console.log("Second")
+	function BookingController($scope, Booking) {
+		Booking.findAll();
+		Booking.bindAll({}, $scope, 'bookings');
+		// DataService.getBookings().success(function (data) {
+		// 	console.log("Third")
+		// 	$scope.bookings = data;
+		// })
 	}
 })();
