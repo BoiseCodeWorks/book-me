@@ -6,7 +6,15 @@
 		.controller('BookingController', BookingController);
 
 	function BookingController($scope, DataService) {
-		console.log(DataService);
-		$scope.bookings = DataService.bookings;
+		$scope.bookings = [];
+		
+		console.log("First")
+
+		DataService.getBookings().success(function (data) {
+			console.log("Third")
+			$scope.bookings = data;
+		})
+
+		console.log("Second")
 	}
 })();
